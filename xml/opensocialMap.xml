@@ -20,7 +20,7 @@
         map.addControl(new GMapTypeControl());
         
         var geocoder = new GClientGeocoder();
-        geocoder.getLatlng(prefs.getString('loc'), showMap);
+        geocoder.getLatLng(prefs.getString('loc'), showMap);
 
         function showMap(point) {
           if (point != null) {
