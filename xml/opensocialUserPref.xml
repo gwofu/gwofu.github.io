@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-  <ModulePrefs title="MPreferences for __UP_myname__" height="250" scaling="false"/>
+  <ModulePrefs title="MPreferences for __UP_myname__" height="250" scaling="false" author="Gwowen Fu">
+    <Require feature="setprefs" />
+  </ModulePrefs>
+  
   <UserPref name="myname" display_name="Name" required="true" />
   <UserPref name="photo" display_name="Photo" default_value="http://doc.examples.googlepages.com/rowan-headshot.jpg" />
   <UserPref name="choice" display_name="Show Photo" datatype="bool" default_value="true" />
+  <UserPref name="mylist" display_name="Add Search Terms" datatype="list" default_value="zdnet|pc|Apple Insider"/>
   <UserPref name="color" display_name="Color" datatype="enum" default_value="Yellow">
     <EnumValue value="Red" /> 
     <EnumValue value="Aqua" /> 
@@ -43,6 +47,8 @@
          }
 
          element.innerHTML = html;
+
+         prefs.setArray("mylist", ["Nokia","CNET"]);
        }
 
        gadgets.util.registerOnLoadHandler(displayGreeting);
