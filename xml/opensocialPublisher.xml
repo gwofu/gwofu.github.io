@@ -13,7 +13,7 @@
       </Param>
     </Require>
   </ModulePrefs>
-  <UserPref name="loc" display_name="Location" required="true" />
+  <UserPref name="location" display_name="Location" required="true" />
   <Content type="html">
   <![CDATA[
     <table>
@@ -31,6 +31,11 @@
     </table>
 
     <script type="text/javascript">
+      var prefs = new gadgets.Prefs();
+      var address = prefs.getString("location");
+      alert("address=" + address);
+      document.getElementById("address").value = address;
+
       function updateLoc() {
         var address = document.getElementById("address").value;
         gadgets.Hub.publish("google.map.address", address);
