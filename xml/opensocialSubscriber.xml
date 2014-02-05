@@ -31,7 +31,7 @@
 
       var map;
       var geocoder = new google.maps.Geocoder();
-      
+
       function callback(topic, data, subscriberData) {
         geocoder.geocode({ 'address': data }, showAddress);
       }
@@ -51,7 +51,7 @@
       function initialize() {
         var mapOptions = {
           center: new google.maps.LatLng(-34.397, 150.644),
-          zoom: 8
+          zoom: 6
         };
         map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
