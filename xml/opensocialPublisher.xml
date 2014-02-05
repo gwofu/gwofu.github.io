@@ -13,7 +13,7 @@
       </Param>
     </Require>
   </ModulePrefs>
-  <UserPref name="location" display_name="Location" required="true" />
+  <UserPref name="loc" display_name="Location" required="true" default_value="Chicago, IL"/>
   <Content type="html">
   <![CDATA[
     <table>
@@ -32,7 +32,7 @@
 
     <script type="text/javascript">
       var prefs = new gadgets.Prefs();
-      var address = prefs.getString("location");
+      var address = prefs.getString("loc");
       alert("address=" + address);
       document.getElementById("address").value = address;
 
