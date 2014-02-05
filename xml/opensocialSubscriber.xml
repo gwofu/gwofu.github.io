@@ -9,6 +9,11 @@
           name="google.map.address"
           subscribe="true"
           />
+        <Topic 
+          title="Google Location List"
+          name="google.map.address.info"
+          publish="true"
+          />
         ]]>
       </Param>
     </Require>
@@ -54,6 +59,9 @@
             map: map,
             position: results[0].geometry.location
           });
+
+          gadgets.Hub.publish("google.map.address.info", results);
+
         } else {
           alert("Geocode was not successful for the following reason: " + status);
         }

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="Google Location List" author="Gwowen Fu" author_email="gwofu@yahoo.com">
+    <Require feature="pubsub-2">
+      <Param name="topics">
+        <![CDATA[
+        <Topic 
+          title="Google Location List"
+          name="google.map.address.info"
+          subscribe="true"
+          />
+        ]]>
+      </Param>
+    </Require>
+  </ModulePrefs>
+  <UserPref name="color" display_name="Color" datatype="enum" default_value="Yellow">
+    <EnumValue value="Red" /> 
+    <EnumValue value="Aqua" /> 
+    <EnumValue value="Lime" /> 
+    <EnumValue value="Yellow" /> 
+    <EnumValue value="Pink" /> 
+    <EnumValue value="Orange" /> 
+    <EnumValue value="White" /> 
+  </UserPref>  
+  <Content type="html">
+  <![CDATA[
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Address</th>
+          <th>Types</th>
+          <th>Location</th>
+          <th>Location Type</th>
+        </tr>
+      </thead>
+      <tbody id="locationList">
+        <tr>
+          <td>Fake Address</td>
+          <td>Fake Types</td>
+          <td>Fake Location</td>
+          <td>Fake Location Type</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script type="text/javascript">
+
+      var prefs = new gadgets.Prefs();
+
+      gadgets.HubSettings.onConnect = function(hub, suc, err) {
+        gadgets.Hub.subscribe("google.map.address.info", callback);
+      }
+
+      function callback(topic, data, subscriberData) {
+        var locations = data;
+        var html = "";
+        for (var i = 0; i < locations.length; i++) {
+          html += "<tr><td>" + locations[i].formatted_address + "</td>";
+          html += "<td>" + JSON.stringify(locations[i].types) + "</td>";
+          html += "<td>" + JSON.stringify(locations[i].geometry.location) + "</td>";
+          html += "<td>" + locations[i].geometry.location_type + "</td></tr>";
+        }
+
+        document.getElementById('locationList').innerHTML = html;
+      }
+
+      function initialize() {
+      }
+
+    </script>
+  ]]>
+  </Content>
+</Module>
