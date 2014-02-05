@@ -9,12 +9,14 @@
           name="google.map.address"
           subscribe="true"
           />
+        ]]>        
+        <![CDATA[
         <Topic 
           title="Google Location List"
           name="google.map.address.info"
           publish="true"
           />
-        ]]>
+        ]]>        
       </Param>
     </Require>
   </ModulePrefs>
