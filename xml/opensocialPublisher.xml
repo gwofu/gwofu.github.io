@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="Google Address" author="Gwowen Fu" author_email="gwofu@yahoo.com">
+    <Require feature="pubsub-2">
+      <Param name="topics">
+        <![CDATA[
+        <Topic 
+          title="Google Maps"
+          name="google.map.address"
+          publish="true"
+          />
+        ]]>
+      </Param>
+    </Require>
+  </ModulePrefs>
+  <UserPref name="loc" display_name="Location" required="true" />
+  <Content type="html">
+  <![CDATA[
+    <table>
+      <tr>
+        <td>Address:</td>
+        <td><input type="text" id="address" name="address" size="40"
+          value="1400 Montefino Ave, Diamind Bar, CA 91765">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="button" value="Update" onclick="updateLoc()">
+        </td>
+      </tr>      
+    </table>
+
+    <script type="text/javascript">
+      function updateLoc() {
+        var address = document.getElementById("address").value;
+        gadgets.Hub.publish("google.map.address", address);
+      }
+    </script>
+  ]]>
+  </Content>
+</Module>

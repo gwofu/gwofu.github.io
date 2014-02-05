@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
   <ModulePrefs title="Map of __UP_loc__" height="300"
-    author="Jane Smith"
-    author_email="xxx@google.com" />
-  <UserPref name="loc"
-    display_name="Location"
-    required="true" />
+    author="Gwowen Fu"
+    author_email="gwofu@yahoo.com" />
+  <UserPref name="loc" display_name="Location" required="true" />
   <Content type="html">
   <![CDATA[
 
@@ -24,7 +22,7 @@
         var map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
       }
-      
+
       google.maps.event.addDomListener(window, 'load', initialize);
 
     </script>
