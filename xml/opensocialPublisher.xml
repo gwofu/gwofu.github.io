@@ -19,8 +19,7 @@
     <table>
       <tr>
         <td>Address:</td>
-        <td><input type="text" id="address" name="address" size="40"
-          value="1400 Montefino Ave, Diamind Bar, CA 91765">
+        <td><input type="text" id="address" name="address" size="40">
         </td>
       </tr>
       <tr>
@@ -33,7 +32,6 @@
     <script type="text/javascript">
       var prefs = new gadgets.Prefs();
       var address = prefs.getString("loc");
-      alert("address=" + address);
       document.getElementById("address").value = address;
 
       function updateLoc() {
