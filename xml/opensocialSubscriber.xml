@@ -62,11 +62,11 @@
       function initialize() {
         var mapOptions = {
           //center: new google.maps.LatLng(41.8781136, -87.62979819999998),
-          zoom: 6
+          zoom: 12
         };
         map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
-            
+
         var address = prefs.getString("loc");
         geocoder.geocode({ 'address': address }, showAddress);
       }
