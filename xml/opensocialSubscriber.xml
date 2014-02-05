@@ -13,7 +13,16 @@
       </Param>
     </Require>
   </ModulePrefs>
-  <UserPref name="loc" display_name="Location" required="true" />
+  <UserPref name="loc" display_name="Location" required="true" default_value="Chicago, IL"/>
+  <UserPref name="color" display_name="Color" datatype="enum" default_value="Yellow">
+    <EnumValue value="Red" /> 
+    <EnumValue value="Aqua" /> 
+    <EnumValue value="Lime" /> 
+    <EnumValue value="Yellow" /> 
+    <EnumValue value="Pink" /> 
+    <EnumValue value="Orange" /> 
+    <EnumValue value="White" /> 
+  </UserPref>  
   <Content type="html">
   <![CDATA[
 
@@ -29,6 +38,7 @@
         gadgets.Hub.subscribe("google.map.address", callback);
       }
 
+      var prefs = new gadgets.Prefs();
       var map;
       var geocoder = new google.maps.Geocoder();
 
@@ -39,8 +49,6 @@
       function showAddress(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
           
-          console.dir(results);
-
           map.setCenter(results[0].geometry.location);
           var marker = new google.maps.Marker( {
             map: map,
@@ -53,11 +61,14 @@
 
       function initialize() {
         var mapOptions = {
-          center: new google.maps.LatLng(-34.397, 150.644),
+          //center: new google.maps.LatLng(41.8781136, -87.62979819999998),
           zoom: 6
         };
         map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
+            
+        var address = prefs.getString("loc");
+        geocoder.geocode({ 'address': address }, showAddress);
       }
 
       google.maps.event.addDomListener(window, 'load', initialize);
