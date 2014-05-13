@@ -1,0 +1,59 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+	padding-bottom: 40px;
+	color: #5a5a5a;
+	background-color: #f6f6f6;
+}
+
+.carousel {
+	margin-top: 100px;
+}
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+.navbar-brand {
+	font-size: 2em;
+}
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 20;
+	font-size: 1.5em;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper .container {
+	padding-right: 0;
+	padding-left: 0;
+	min-height: 90px;
+}
+.navbar-wrapper .navbar {
+	padding-right: 15px;
+	padding-left: 15px;
+	min-height: 90px;
+}
+
+/* Navbar positioning foo */
+.navbar-wrapper .container {
+	padding-right: 15px;
+	padding-left:  15px;
+  vertical-align: middle;
+  position: relative;
+}
+.navbar-wrapper .navbar {
+	padding-right: 0;
+	padding-left:  0;
+}
+.navbar-brand {
+	margin-top: 20px;
+}
+.navbar-collapse {
+	margin-top: 30px;
+}
