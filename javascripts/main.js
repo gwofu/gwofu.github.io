@@ -57,7 +57,5 @@
 		$(this).removeClass('animated swing');
 	});
 
+
 })(jQuery);
-
-
-
