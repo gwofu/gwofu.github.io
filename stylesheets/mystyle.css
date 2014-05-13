@@ -16,6 +16,11 @@ body {
 -------------------------------------------------- */
 .navbar-brand {
 	font-size: 2em;
+	font-family: 'Nunito', sans-serif;
+}
+
+.nav li:hover {
+	border: 1px solid gray;
 }
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
