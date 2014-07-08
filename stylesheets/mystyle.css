@@ -49,8 +49,8 @@ body {
 .navbar-wrapper .container {
 	padding-right: 15px;
 	padding-left:  15px;
-  vertical-align: middle;
-  position: relative;
+	vertical-align: middle;
+	position: relative;
 }
 .navbar-wrapper .navbar {
 	padding-right: 0;
@@ -61,4 +61,11 @@ body {
 }
 .navbar-collapse {
 	margin-top: 30px;
+}
+
+@font-face {
+	font-family: 'Glyphicons Halflings';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Glyphicons Halflings'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype');
 }
