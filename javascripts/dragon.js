@@ -36,14 +36,8 @@
 
 			var colSize, rolSize;
 
-			if (settings.width > 0) {
-				colSize = settings.width - settings.col * marginSize;
-				rowSize = settings.height - settings.row * marginSize;
-			}
-			else {
-				colSize = Math.round((settings.parent.innerWidth() - settings.col * marginSize) / settings.col);
-				rowSize = Math.round((settings.parent.innerHeight() - settings.row * marginSize) / settings.row);
-			}
+			colSize = Math.floor((settings.parent.innerWidth() - settings.col * marginSize) / settings.col);
+			rowSize = Math.floor((settings.parent.innerHeight() - settings.row * marginSize) / settings.row);
 
 			$(this).addClass('dragon');
 			$(this).width(colSize + 'px');
