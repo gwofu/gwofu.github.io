@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dragon.js</title>
+	<link rel="stylesheet" href="../stylesheets/reset.css">
+	<link rel="stylesheet" href="https://rawgit.com/gwofu/dragon.js/master/dragon.css">
+	<link rel="stylesheet" href="../stylesheets/customdragon.css">
+
+</head>
+<body>
+	<div class="title">
+		Dragon.js
+	</div>
+	<div class="panel">
+		Given width, height, column and row, you get draggable, switchable items.
+		<br><br>
+		<p><a href="https://raw.github.com/gwofu/dragon.js/master/dragon.js" download="dragon.js">Download dragon.js</a>, and <a href="https://raw.github.com/gwofu/dragon.js/master/dragon.css" download="dragon.css">dragon.css</a> or <a href="//github.com/gwofu/dragon.js">View on GitHub</a></p>
+	</div>
+	<section>
+		<div><button class="d1">Demo 1</button></div>
+		<div class="demo1">
+			<div id="div1" class="shadow">
+				<div class="border">
+					<div class="content">
+						1
+					</div>
+				</div>
+			</div>
+			<div id="div2" class="shadow">
+				<div class="border">
+					<div class="content">
+						2
+					</div>
+				</div>
+			</div>
+			<div id="div3" class="shadow">
+				<div class="border">
+					<div class="content">
+						3
+					</div>
+				</div>
+			</div>
+			<div id="div4" class="shadow">
+				<div class="border">
+					<div class="content">
+						4
+					</div>
+				</div>
+			</div>
+			<div id="div5" class="shadow">
+				<div class="border">
+					<div class="content">
+						5
+					</div>
+				</div>
+			</div>
+		</div>
+		<br><br>
+		<code>
+		$('.demo1 .div').dragon({
+			col: 4,
+			row: 2,
+			margin: 2
+		});
+		</code>
+	</section>
+	
+	<hr>
+
+	<section>
+		<div><button>Demo 2</button></div>
+		<div class="demo2">
+			<div id="div6" class="shadow">
+				<div class="border">
+					<div class="content">1
+					</div>
+				</div>
+			</div>
+			<div id="div7" class="shadow">
+				<div class="border">
+					<div class="content">2</div>
+				</div>
+			</div>
+			<div id="div8" class="shadow">
+				<div class="border">
+					<div class="content">3</div>
+				</div>
+			</div>
+			<div id="div9" class="shadow">
+				<div class="border">
+					<div class="content">4</div>
+				</div>
+			</div>
+			<div id="div10" class="shadow">
+				<div class="border">
+					<div class="content">5</div>
+				</div>
+			</div>
+		</div>
+		<br><br>
+		<code>
+		$('.demo2 .div').dragon({
+			col: 1,
+			row: 5,
+			restrict: 'x'
+		});
+		</code>
+	</section>
+
+	<hr>
+
+	<section>
+		<div><button>Demo 3</button></div>
+		<div class="demo3">
+			<div id="div300" class="shadow">
+				<div class="border">
+					<div class="content"><div><button onclick="">Button 1</button></div></div>
+				</div>
+			</div>
+			<div id="div301" class="shadow">
+				<div class="border">
+					<div class="content"><div><button onclick="">Button 2</button></div></div>
+				</div>
+			</div>
+			<div id="div302" class="shadow">
+				<div class="border">
+					<div class="content"><div><button onclick="">Button 3</button></div></div>
+				</div>
+			</div>
+			<div id="div303" class="shadow">
+				<div class="border">
+					<div class="content"><div><button onclick="">Button 4</button></div></div>
+				</div>
+			</div>
+			<div id="div304" class="shadow">
+				<div class="border">
+					<div class="content"><div><button onclick="">Button 5</button></div></div>
+				</div>
+			</div>
+		</div>
+		<br><br>
+		<code>
+		$('.demo3 .div').dragon({
+			col: 1,
+			row: 5
+		});
+		</code>
+	</section>
+
+	<hr>
+
+	<section>
+		<div><button>Demo 4</button></div>
+		<div class="demo4">
+			<div class="shadow">
+				<div class="border">
+					<div class="content"><div><button onclick="">Button 1</button></div></div>
+				</div>
+			</div>
+			<div class="shadow">
+				<div class="border">
+					<div class="content"><div><button onclick="">Button 2</button></div></div>
+				</div>
+			</div>
+			<div class="shadow">
+				<div class="border">
+					<div class="content"><div><button onclick="">Button 3</button></div></div>
+				</div>
+			</div>
+			<div class="shadow">
+				<div class="border">
+					<div class="content"><div><button onclick="">Button 4</button></div></div>
+				</div>
+			</div>
+			<div class="shadow">
+				<div class="border">
+					<div class="content"><div><button onclick="">Button 5</button></div></div>
+				</div>
+			</div>
+		</div>
+		<br><br>
+		<code>
+		$('.demo4 .div').dragon({
+			col: 5,
+			row: 1,
+			restrict: 'y'
+		});
+		</code>
+	</section>
+
+	<footer class="center">
+		<p class="logo">= XinDong =</p>
+		<p>Created by: Gwowen Fu</p>
+		<p>Contact information: <a href="mailto:gwofu@yahoo.com">gwofu@yahoo.com</a>.</p>
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="https://rawgit.com/gwofu/dragon.js/master/dragon.js"></script>
+	<script src="../javascripts/customdragon.js"></script>
+
+</body>
+</html>

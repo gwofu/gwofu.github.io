@@ -1,0 +1,116 @@
+@import url("keyframes.css") screen;
+
+/*a {
+	color: #000;
+	transition-property: color;
+	transition-duration: 0.7s;
+	transition-timing-function: ease-in;
+	transition-delay: 0.3s;
+	transition: color 0.7s ease-in 0.3s;
+}*/
+
+/*a:hover {
+	color: #fff;
+}
+*/
+/*
+div {
+   animation-name: move;
+   animation-duration: 1s;
+   animation-timing-function: ease-in-out;
+   animation-delay: 0.5s;
+   animation-iteration-count: 2;
+   animation-direction: alternate;
+
+   -moz-animation-name: move;
+   -moz-animation-duration: 1s;
+   -moz-animation-timing-function: ease-in-out;
+   -moz-animation-delay: 0.5s;
+   -moz-animation-iteration-count: 2;
+   -moz-animation-direction: alternate;
+
+   -webkit-animation-name: move;
+   -webkit-animation-duration: 1s;
+   -webkit-animation-timing-function: ease-in-out;
+   -webkit-animation-delay: 0.5s;
+   -webkit-animation-iteration-count: 2;
+   -webkit-animation-direction: alternate;
+
+	animation: move 1s ease-in-out 0.5s 2 alternate;
+	-moz-animation: move 1s ease-in-out 0.5s 2 alternate;
+  -webkit-animation: move 1s ease-in-out 0.5s 2 alternate;
+}*/
+
+#slider {
+   background: #345;
+   border: 5px solid #eaeaea;
+   box-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+   height: 320px;
+   width: 680px;
+   margin: 40px auto 0;
+   overflow: visible;
+   position: relative;
+}
+
+#mask {
+   overflow: hidden;
+   height: 320px;
+}
+
+#slider ul {
+   margin: 0;
+   padding: 0;
+   position: relative;
+}
+
+#slider li {
+   width: 680px;  /* Width Image */
+   height: 320px; /* Height Image */
+   position: absolute;
+   top: -325px; /* Original Position - Outside of the Slider */
+   list-style: none;
+}
+
+#slider li.firstanimation {
+	-moz-animation:cycle 25s linear infinite;	
+	-webkit-animation:cycle 25s linear infinite;		
+}
+#slider li.secondanimation {
+	-moz-animation:cycletwo 25s linear infinite;
+	-webkit-animation:cycletwo 25s linear infinite;		
+}
+#slider li.thirdanimation {
+	-moz-animation:cyclethree 25s linear infinite;
+	-webkit-animation:cyclethree 25s linear infinite;		
+}
+#slider li.fourthanimation {
+	-moz-animation:cyclefour 25s linear infinite;
+	-webkit-animation:cyclefour 25s linear infinite;		
+}
+#slider li.fifthanimation {
+	-moz-animation:cyclefive 25s linear infinite;
+	-webkit-animation:cyclefive 25s linear infinite;		
+}
+
+#slider .tooltip {
+   background: rgba(0,0,0,0.7);
+   width: 300px;
+   height: 60px;
+   position: relative;
+   bottom: 75px;
+   left: -320px;
+   -moz-transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.3s ease-in-out;
+}
+
+#slider .tooltip h1 {
+   color: #fff;
+   font-size: 24px;
+   font-weight: 300;
+   line-height: 60px;
+   padding: 0 0 0 10px;
+}
+
+#slider li:hover .tooltip {
+	left:0px;
+}

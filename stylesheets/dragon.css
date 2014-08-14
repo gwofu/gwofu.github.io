@@ -1,0 +1,55 @@
+.dragon {
+	background-color: #F6F7F8;
+	display: inline-block;
+	float: left;
+	position: relative;
+	overflow: hidden;
+
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+}
+
+.dragon:hover {
+	z-index: 99;
+}
+
+.dragon:hover .content {
+	background-color: rgba(40,200,150,0.5);
+}
+
+.dragon:active {
+	cursor: move;
+	z-index: 99;
+}
+
+.dragon .border {
+	position: relative;
+	background-color: #F6F7F8;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	padding: 5px;
+	height: 100%;
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+}
+
+.dragon .content {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	background-color: #2CC0B3;
+	width: 100%;
+	height: 100%;
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+}
+
+.dragon.transition {
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+}
