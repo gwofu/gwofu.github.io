@@ -33,11 +33,8 @@
     <div class="columns hide show-for-large">
       <button class="filter-button" ng-click="triggerFilterBox()" title="Filter"><i class="fa fa-filter fa-fw enable"></i></button>
     </div>
-    <div class="columns">
-      <button class="install-app" onclick="chrome.webstore.install('https://chrome.google.com/webstore/detail/bnkefnlambfodbmopbfgkjdginemapec', function(){alert('success')}, function(detail){alert(detail);})" title="Install">Install App</button>
-    </div>
     <div class="columns show-for-large" ng-show="isAdvisor">
-      <a href="app/DeVryDesktopCapture.crx" class="button">DOWNLOAD</a>
+      <button class="install-app" onclick="chrome.webstore.install('https://chrome.google.com/webstore/detail/bnkefnlambfodbmopbfgkjdginemapec', function(){alert('success')}, function(detail){alert(detail);})" title="Install"><i class="fa fa-chrome fa-fw enable"></i></button>
     </div>
   </div>
 </nav>
