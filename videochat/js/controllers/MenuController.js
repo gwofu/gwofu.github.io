@@ -1,7 +1,8 @@
 mainApp.controller('MenuController', function ($rootScope, $scope, $window, WebRTCService) {
   console.log("This is MenuController");
   const DESKTOP_MEDIA = ['screen', 'window'];
-  const url = 'wss://d40373764.dvuadmin.net:8443';
+  const url = 'wss://24.15.241.152:8443';
+  //const url = 'wss://d40373764.dvuadmin.net:8443';
   //const url = 'wss://192.168.1.7:8443';
 
   $scope.signin = function (username, isAdvisor) {
