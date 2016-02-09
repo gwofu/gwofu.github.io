@@ -40,6 +40,14 @@ function updateMessage(message) {
   }
 }
 
+function appInstallSuccess() {
+  updateMessage("DeVry Screen Sharing App is installed successful.");
+}
+
+function appInstallError(detail) {
+  updateMessage("Failed to install DeVry Screen Sharing App: " + detail);
+}
+
 var dispatchEvent = function (type, success, message) {
   var event = new CustomEvent(
     "WEBRTC_EVENT", {
