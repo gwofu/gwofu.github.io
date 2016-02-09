@@ -169,7 +169,7 @@ mainApp.controller('MenuController', function ($rootScope, $scope, $window, WebR
   $scope.launchChromeApp = function () {
     document.querySelector('.sharescreen-button').disabled = true;
 
-    var w = $window.open("https://24.15.241.152/foundation/launchapp", "", "width=200, height=100");
+    var w = $window.open("https://gwofu.github.io/videochat/launchapp", "", "width=200, height=100");
     w.close();
 
     var count = 0;
@@ -179,7 +179,7 @@ mainApp.controller('MenuController', function ($rootScope, $scope, $window, WebR
     var interval = window.setInterval(function () {
 
       // The ID of the extension we want to talk to.
-      var editorExtensionId = "iigmfchpgiaigcpabhlpjndfcgpfgnom";
+      var editorExtensionId = "fdenocfcfikjpnhncnlngeienpcogcfd";
 
       // Make a simple request:
       chrome.runtime.sendMessage(editorExtensionId, {
